@@ -195,9 +195,9 @@ header .main-menu{
     right: 0px;
     z-index: 1;
 }
-header .main-menu .item{
+/* header .main-menu .item{
     
-}
+} */
 header .main-menu .item .item__name{
     padding: 10px 20px 34px 20px;
     font-family: Arial, Helvetica, sans-serif;
@@ -611,9 +611,9 @@ header .badges .badge{
 .season-product .text-group .description{
     margin-bottom: 15px;
 }
-.season-product .text-group .more{
+/* .season-product .text-group .more{
     
-}
+} */
 
 /* RESERVE COFFEE */
 .reserve-coffee{
@@ -752,4 +752,46 @@ header .badges .badge{
 }
 .find-store .text-group .description{
     margin-bottom: 20px;
+}
+/* AWARDS */
+.awards{
+    background-color: #272727;
+}
+.awards .inner{
+    padding: 40px 0;
+}
+.awards .swiper-container{
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+}
+.awards .swiper-prev,
+.awards .swiper-next
+{
+    width: 42px;
+    height: 42px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    outline: none;
+    color: #fff ;
+    opacity: 0.3;
+    cursor: pointer;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.awards .swiper-prev{
+    left: -100px;
+}
+.awards .swiper-next{
+    right: -100px;
+}
+.awards .swiper-prev:hover,
+.awards .swiper-next:hover{
+    background-color: #fff;
+    color:#333;
 }

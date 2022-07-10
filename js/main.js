@@ -59,10 +59,23 @@ new Swiper('.promotion .swiper-container',{
         clickable: true
     },
     navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".awards .swiper-next",
+        prevEl: ".awards .swiper-prev",
     }
 });
+
+new Swiper('.awards .swiper-container',{
+    autoplay: true,
+    loop:true,
+    spaceBetween:30,
+    slidesPerView: 5,
+    navigation:{
+        nextEl: ".swiper-next",
+        prevEl: ".swiper-prev",
+    }
+});
+
+
 
 const promotionEl =document.querySelector(".promotion");
 const promotionToggleBtn =document.querySelector(".toggle-promotion");
