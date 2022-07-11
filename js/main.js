@@ -15,6 +15,7 @@ searchElInput.addEventListener("blur",function(){
     searchElInput.setAttribute("placeholder","");
 });
 
+const toTopEl = document.querySelector("#to-top");
 const badgeEL=document.querySelector("header .badges");
 
 window.addEventListener("scroll",_.throttle(function(){
@@ -23,14 +24,26 @@ window.addEventListener("scroll",_.throttle(function(){
             opacity: 0,
             display: "none"
         });
+        gsap.to(toTopEl,0.2,{
+            x: 0
+        })
     }
     else{
         gsap.to(badgeEL,0.6,{
             opacity: 1,
             display: "block"
         });
+        gsap.to(toTopEl,0.2,{
+            x: 100
+        })
     }
 },300));
+
+toTopEl.addEventListener("click",function() {
+    gsap.to(window, 0.7,{
+        scrollTo: 0
+    });
+});
 
 const fadeEls=document.querySelectorAll(".visual .fade-in");
 fadeEls.forEach(function(fadeEl,index){
@@ -59,8 +72,8 @@ new Swiper('.promotion .swiper-container',{
         clickable: true
     },
     navigation: {
-        nextEl: ".awards .swiper-next",
-        prevEl: ".awards .swiper-prev",
+        nextEl: ".promotion .swiper-button-next",
+        prevEl: ".promotion .swiper-button-prev",
     }
 });
 
@@ -120,3 +133,5 @@ spyEls.forEach(function(spyEl){
         .addTo(new ScrollMagic.Controller());
 });
 
+const thisYear = document.querySelector(".this-year")
+thisYear.textContent = new Date().getFullYear();
